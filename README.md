@@ -15,7 +15,7 @@ These data attributes applied to all social networks.
 
 Field | Description
 --- | ---
-`type` | Social Network (twitter, pinterest, facebook, googleplus)
+`type` | Social Network (twitter, pinterest, facebook_share, facebook_feed, googleplus)
 `url` | URL you want to share
 `description` | Description of the page
 `media` | URL to an image
@@ -31,3 +31,4 @@ Field | Description
 Field | Description
 --- | ---
 `title` | Your page title
+`appid` | Your Facebook App ID

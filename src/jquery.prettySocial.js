@@ -19,15 +19,22 @@
           height: 500
         }
       },
-      facebook: {
-        url: 'https://www.facebook.com/sharer/sharer.php?s=100&p[title]={{title}}&p[summary]={{description}}&p[url]={{url}}&p[images][0]={{media}}',
+      facebook_share: {
+        url: 'https://www.facebook.com/dialog/share?display=popup&app_id={{appid}}&href={{url}}',
+        popup: {
+          width: 626,
+          height: 436
+        }
+      },
+      facebook_feed: {
+        url: 'https://www.facebook.com/dialog/feed?app_id={{appid}}&display=popup&caption={{title}}&link={{url}}&picture={{media}}&description={{description}}&name={{title}}',
         popup: {
           width: 626,
           height: 436
         }
       },
       twitter: {
-        url: 'https://twitter.com/share?url={{url}}&via={{via}}&text={{description}}',
+        url: 'https://twitter.com/intent/tweet?url={{url}}&via={{via}}&text={{description}}',
         popup: {
           width: 685,
           height: 500
@@ -71,11 +78,13 @@
     */
     _linkFix = function (site, link) {
       // replace template url
-      var url = site.url.replace(/{{url}}/g, encodeURIComponent(link.url))
-      .replace(/{{title}}/g, encodeURIComponent(link.title))
-      .replace(/{{description}}/g, encodeURIComponent(link.description))
-      .replace(/{{media}}/g, encodeURIComponent(link.media))
-      .replace(/{{via}}/g, encodeURIComponent(link.via));
+      var url = site.url
+        .replace(/{{url}}/g, encodeURIComponent(link.url))
+        .replace(/{{title}}/g, encodeURIComponent(link.title))
+        .replace(/{{description}}/g, encodeURIComponent(link.description))
+        .replace(/{{media}}/g, encodeURIComponent(link.media))
+        .replace(/{{via}}/g, encodeURIComponent(link.via))
+        .replace(/{{appid}}/g, encodeURIComponent(link.appid));
 
       return url;
     };
@@ -102,7 +111,8 @@
         title: $this.data('title') || '',
         description: $this.data('description') || '',
         media: $this.data('media') || '',
-        via: $this.data('via') || ''
+        via: $this.data('via') || '',
+        appid: $this.data('appid') || ''
       };
 
       // prepare link
