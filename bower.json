@@ -6,7 +6,7 @@
     "Paul-Émile MINY <paulemile.miny@gmail.com>"
   ],
   "description": "",
-  "main": "",
+  "main": "dist/jquery.prettySocial.min.js",
   "license": "MIT",
   "ignore": [
     "**/.*",
