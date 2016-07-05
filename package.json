@@ -1,0 +1,25 @@
+{
+  "name": "pretty-social",
+  "version": "1.0.0",
+  "description": "prettySocial",
+  "main": "dist/jquery.prettySocial.min.js",
+  "scripts": {
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polem/prettySocial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/polem/prettySocial/issues"
+  },
+  "homepage": "https://github.com/polem/prettySocial#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.4"
+  }
+}

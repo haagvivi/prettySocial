@@ -1,0 +1,18 @@
+{
+  "name": "pretty-social",
+  "homepage": "https://github.com/polem/prettySocial",
+  "authors": [
+    "Sonny T. <hi@sonnyt.com>",
+    "Paul-Émile MINY <paulemile.miny@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
